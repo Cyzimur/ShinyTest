@@ -20,5 +20,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Shiny\" />
+    <Folder Include="Shiny\Delegates\" />
   </ItemGroup>
 </Project>

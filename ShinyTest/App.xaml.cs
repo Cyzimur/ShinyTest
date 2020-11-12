@@ -6,6 +6,7 @@ using ShinyTest.Views;
 using Prism;
 using Prism.Ioc;
 using ShinyTest.ViewModels;
+using Prism.DryIoc;
 
 namespace ShinyTest
 {
@@ -48,5 +49,8 @@ namespace ShinyTest
                     }
                 });
         }
+
+        protected override IContainerExtension CreateContainerExtension() =>
+            PrismContainerExtension.Current;
     }
 }

@@ -4,6 +4,7 @@ using Shiny;
 using Shiny.Logging;
 using Shiny.Prism;
 using Prism.DryIoc;
+using ShinyTest.Shiny.Delegates;
 
 namespace ShinyTest.Shiny
 {
@@ -18,8 +19,7 @@ namespace ShinyTest.Shiny
             Log.UseConsole();
             Log.UseDebug();
 
-            //services.UsePushAzureNotificationHubs<PushDelegate>("Your listener connection string", "your hub name");
-            services.UseNotifications(true);
+            services.UseNotifications<ShinyTestNotificationDelegate>(true);
 
             //Startup Task
             services.AddSingleton<ServiceStack>();
